@@ -318,6 +318,7 @@ Polymer({
             }
             
             this._setExists(null);
+			  this._setLoading(true);
             this._onOnce = true;
             this._query = query;
 
@@ -358,6 +359,7 @@ Polymer({
           	this.set('data', this.zeroValue);
           	this._setExists(false);
           }
+			this._setLoading(false);
 
           const query = this.query
 
