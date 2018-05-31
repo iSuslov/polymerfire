@@ -294,11 +294,13 @@ Polymer({
             oldQuery.off('child_changed', this.__onFirebaseChildChanged, this);
             oldQuery.off('child_moved', this.__onFirebaseChildMoved, this);
 
-            this.syncToMemory(function() {
-              this.__map = {};
-              this.set('data', this.zeroValue);
-              this._setExists(null);
-            });
+			  
+				  this.syncToMemory(function () {
+					  this.__map = {};
+					  //this.set('data', this.zeroValue);
+					  this._setExists(null);
+				  });
+			  
           }
 
           // this allows us to just call the addition of event listeners only once.
@@ -353,6 +355,7 @@ Polymer({
             }
             this._setExists(true);
           } else {
+          	this.set('data', this.zeroValue);
           	this._setExists(false);
           }
 

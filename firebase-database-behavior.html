@@ -62,7 +62,15 @@ https://github.com/firebase/polymerfire/blob/master/LICENSE
           readOnly: true,
           reflectToAttribute: true
         },
-
+		  /**
+		   * `loading`
+		   */
+		  loading: {
+			  type: Boolean,
+			  notify: true,
+			  value: false,
+			  readOnly: true
+		  }
       },
 
       observers: [
